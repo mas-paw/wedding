@@ -16,6 +16,7 @@
         .fixed-image {
             background: url('https://via.placeholder.com/800x1000') no-repeat center center;
             background-size: cover;
+			background-color: gray;
             width: 65%;
             height: 100vh;
             position: fixed;
@@ -38,6 +39,15 @@
             text-align: center;
             padding: 20px;
             border-bottom: 1px solid #ddd;
+        }
+
+		@media (max-width: 768px) {
+            .fixed-image {
+                display: none;
+            }
+            .scroll-content {
+                width: 100%;
+            }
         }
     </style>
 </head>
