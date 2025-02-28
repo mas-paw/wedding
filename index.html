@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Web Undangan</title>
+    <title>Undangan Pernikahan</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .container-fluid {
@@ -16,8 +16,7 @@
         .fixed-image {
             background: url('https://via.placeholder.com/800x1000') no-repeat center center;
             background-size: cover;
-			background-color: gray;
-            width: 65%; /* Lebar lebih besar */
+            width: 65%;
             height: 100vh;
             position: fixed;
         }
@@ -29,6 +28,10 @@
             background: #fff;
             padding: 20px;
         }
+        .section {
+            padding: 40px 0;
+            border-bottom: 1px solid #ddd;
+        }
     </style>
 </head>
 <body>
@@ -36,11 +39,62 @@
 <div class="container-fluid">
     <div class="fixed-image"></div>
     <div class="scroll-content">
-        <h2>Undangan Pernikahan</h2>
-        <p>Halo, selamat datang di undangan pernikahan kami.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        <p>(Tambahkan isi undangan di sini)</p>
-        <p style="margin-bottom: 500px;">(Scroll untuk melihat lebih banyak)</p>
+        
+        <!-- Section 1: Jumbotron -->
+        <section class="section text-center">
+            <img src="https://via.placeholder.com/300x200" class="img-fluid rounded mb-3" alt="Jumbotron Image">
+            <h1>Nama Pengantin</h1>
+            <p>Dengan penuh kebahagiaan, kami mengundang Anda untuk hadir di pernikahan kami.</p>
+        </section>
+
+        <!-- Section 2: Perkenalan Calon Mempelai -->
+        <section class="section text-center">
+            <h2>Calon Mempelai</h2>
+            <div class="row">
+                <div class="col-6">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded-circle mb-2" alt="Mempelai Pria">
+                    <p>Nama Mempelai Pria</p>
+                </div>
+                <div class="col-6">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded-circle mb-2" alt="Mempelai Wanita">
+                    <p>Nama Mempelai Wanita</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Memories -->
+        <section class="section text-center">
+            <h2>Memories</h2>
+            <div class="row">
+                <div class="col-4"><img src="https://via.placeholder.com/100" class="img-fluid rounded" alt="Memory 1"></div>
+                <div class="col-4"><img src="https://via.placeholder.com/100" class="img-fluid rounded" alt="Memory 2"></div>
+                <div class="col-4"><img src="https://via.placeholder.com/100" class="img-fluid rounded" alt="Memory 3"></div>
+            </div>
+        </section>
+
+        <!-- Section 4: Acara -->
+        <section class="section text-center">
+            <h2>Acara</h2>
+            <p><strong>Akad:</strong> Sabtu, 1 Januari 2025, 10:00 WIB</p>
+            <p><strong>Resepsi:</strong> Sabtu, 1 Januari 2025, 13:00 WIB</p>
+            <p><strong>Lokasi:</strong> Gedung Pernikahan XYZ</p>
+        </section>
+
+        <!-- Section 5: Ucapan -->
+        <section class="section text-center">
+            <h2>Ucapan & Doa</h2>
+            <p>Silakan tinggalkan doa dan ucapan Anda untuk pengantin.</p>
+            <textarea class="form-control" rows="3" placeholder="Tulis doa & ucapan"></textarea>
+            <button class="btn btn-primary mt-2">Kirim</button>
+        </section>
+
+        <!-- Section 6: Kirim Hadiah -->
+        <section class="section text-center">
+            <h2>Kirim Hadiah</h2>
+            <p>Jika ingin mengirim hadiah, silakan transfer ke:</p>
+            <p><strong>Bank XYZ</strong> - 1234567890 (a.n. Nama Pengantin)</p>
+        </section>
+
     </div>
 </div>
 
