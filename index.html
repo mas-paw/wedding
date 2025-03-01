@@ -118,6 +118,29 @@
         .event-details p {
             font-size: 1.2rem;
         }
+		.event-details h2,
+		.event-details p,
+		.event-details .row
+		{
+			color: black;
+		}
+
+		.countdown-container {
+			background: rgba(0, 0, 0, 0.05);
+			padding: 15px;
+			border-radius: 10px;
+			margin-bottom: 15px;
+		}
+		.countdown-box {
+			display: block;
+			font-size: 2rem;
+			font-weight: bold;
+			background: white;
+			color: black;
+			padding: 10px;
+			border-radius: 8px;
+			margin: 5px;
+		}
 
 		@media (max-width: 768px) {
             .fixed-image {
@@ -173,14 +196,39 @@
         </section>
 
         <!-- Section 3: Acara -->
-        <section class="section text-center">
+		<section class="section text-center">
 			<div class="event-details">
-                <h2>Acara Pernikahan</h2>
-                <p><strong>Tanggal:</strong> 24 Mei 2025</p>
-                <p><strong>Waktu:</strong> 10:00 - 14:00 WIB</p>
-                <p><strong>Lokasi:</strong> Gedung Pernikahan Bahagia, Jakarta</p>
-            </div>
-        </section>
+				<!-- Countdown -->
+				<div id="countdown" class="countdown-container">
+					<h3>Menuju Hari Bahagia</h3>
+					<div class="row">
+						<div class="col-3"><span id="days" class="countdown-box">00</span><p>Hari</p></div>
+						<div class="col-3"><span id="hours" class="countdown-box">00</span><p>Jam</p></div>
+						<div class="col-3"><span id="minutes" class="countdown-box">00</span><p>Menit</p></div>
+						<div class="col-3"><span id="seconds" class="countdown-box">00</span><p>Detik</p></div>
+					</div>
+				</div>
+
+				<!-- Detail Acara -->
+				<h2>Acara Pernikahan</h2>
+				<div class="row">
+					<div class="col-md-6">
+						<h4>Akad Nikah</h4>
+						<p><strong>Tanggal:</strong> 24 Mei 2025</p>
+						<p><strong>Waktu:</strong> 9:00 WIB</p>
+					</div>
+					<div class="col-md-6">
+						<h4>Resepsi</h4>
+						<p><strong>Tanggal:</strong> 24 Mei 2025</p>
+						<p><strong>Waktu:</strong> 11:00 - 13:00 WIB</p>
+					</div>
+				</div>
+
+				<!-- Lokasi & Maps -->
+				<p><strong>Lokasi:</strong> WoodenKlub Cipayung, Jakarta</p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2804.155705624966!2d106.91156295594416!3d-6.306356881276572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699388e486da17%3A0xa988d26b5f21c9a!2sWoodenKlub%20-%20Coffee%20%26%20Culture!5e0!3m2!1sid!2sid!4v1740822052446!5m2!1sid!2sid" width="100%" height="200" style="border:0;" allowfullscreen loading="lazy"></iframe>
+			</div>
+		</section>
 
 		<!-- Section 4: Memories -->
         <section class="section text-center">
@@ -220,7 +268,29 @@
 			music.pause();
 		}
 	}
+	const startCountdown = (targetDate) => {
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                document.getElementById("countdown").innerHTML = "<h3>Hari Bahagia Telah Tiba!</h3>";
+                return;
+            }
+
+            document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+            document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    }
 	$(function(){
+		const weddingDate = new Date("May 24, 2025 09:00:00").getTime();
+    	startCountdown(weddingDate);
+
 		const music = $("#bg-music")[0];
 		 // Kunci scroll saat awal
 		$(".scroll-content").addClass("locked");
