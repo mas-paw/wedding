@@ -25,24 +25,36 @@ const tableName = 'attendance'
 const getComments = () => {
 	const dbRef = ref(db, `${tableName}/`)
 	$('#comments').html('')
-	const commentsDiv = $('#comments');
 	
-	onValue(dbRef, (snapshot) => {
-		snapshot.forEach((childSnapshot) => {
-			const childKey = childSnapshot.key;
-			const childData = childSnapshot.val();
-			const elem = document.createElement('div')
-      elem.innerHTML = `
-        <div class="comment-item">
-          <p><strong>${childData.name}</strong>: ${childData.comment}</p>
-          <p><em>${childData.attendance}</em></p> <!-- Display attendance status -->
-        </div>
-      `;
+	onValue(dbRef, renderUcapan);
+}
 
-	      $(elem).appendTo(commentsDiv);
-	  	});
-	},{
-		onlyOnce: true
+const timeAgo = (time) =>{
+    const now = Date.now();
+    const diff = Math.floor((now - time) / 1000);
+    if (diff < 60) return "Just now";
+    if (diff < 3600) return `${Math.floor(diff / 60)} minutes ago`;
+    if (diff < 86400) return `${Math.floor(diff / 3600)} hours ago`;
+    if (diff < 604800) return `${Math.floor(diff / 86400)} days ago`;
+    if (diff < 2592000) return `${Math.floor(diff / 604800)} weeks ago`;
+    if (diff < 31536000) return `${Math.floor(diff / 2592000)} months ago`;
+    return `${Math.floor(diff / 31536000)} years ago`;
+}
+
+const renderUcapan = (snapshot) =>{
+    const ucapanList = document.getElementById('comments');
+    ucapanList.innerHTML = '';
+    snapshot.forEach(child => {
+        const { name, comment, createdAt, attendance } = child.val();
+        const waktu = timeAgo(createdAt);
+        const ucapanItem = `
+            <div class='card p-2 mb-2'>
+                <strong>${name}</strong> <strong>${attendance}</strong>
+                <i class="bi bi-clock"></i><small>${waktu}</small>
+                <p>${comment}</p>
+            </div>
+        `;
+        ucapanList.innerHTML += ucapanItem;
     });
 }
 
@@ -64,7 +76,8 @@ $(function(){
         set(ref(db, `${tableName}/${userId}`), {
             name: name,
             comment: comment,
-            attendance: attendance
+            attendance: attendance,
+            createdAt : Date.now()
         }).then(() => {
         
             // Reset form
