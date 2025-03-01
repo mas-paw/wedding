@@ -1,0 +1,154 @@
+.container-fluid {
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    padding:0;
+    margin:0;
+}
+.fixed-image {
+    background: url('https://via.placeholder.com/800x1000') no-repeat center center;
+    background-size: cover;
+    background-color: gray;
+    width: 65%;
+    height: 100vh;
+    position: fixed;
+}
+.scroll-content {
+    width: 35%;
+    margin-left: auto;
+    height: 100vh;
+    overflow-y: auto;
+    background: #fff;
+    padding: 0;
+}
+.landing {
+    position: absolute;
+    width: 35%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+    transition: opacity 1s ease-in-out;
+}
+
+.landing-content {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+button#open-invitation {
+    background: #FFD700;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button#open-invitation:hover {
+    background: #FFA500;
+}
+
+.scroll-content.locked {
+    overflow: hidden;
+}
+
+.music-control {
+    position: absolute;
+    top: 0;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    width: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.music-control:hover {
+    background: rgba(255, 255, 255, 1);
+}
+.section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.section:nth-child(4) { background-color: #B19CD9; color: #FFFFFF; } /* Ungu Lembut */
+.section:nth-child(5) { background-color: #FFD1DC; color: #333333; } /* Peach */
+.section:nth-child(6) { background-color: #C3B1E1; color: #FFFFFF; } /* Lavender */
+.section:nth-child(7) { background-color: #F5E6CC; color: #333333; } /* Beige */
+.section:nth-child(8) { background-color: #9370DB; color: #FFFFFF; } /* Mauve */
+.section:nth-child(9) { background-color: #556B2F; color: #FFFFFF; } /* Olive */
+.event-details {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.event-details h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.event-details p {
+    font-size: 1.2rem;
+}
+.event-details h2,
+.event-details p,
+.event-details .row
+{
+    color: black;
+}
+
+.countdown-container {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.countdown-box {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+.footer {
+    padding: 20px;
+    background: #3e3e3e;
+    font-size: 0.9rem;
+    color: #333;
+    bottom: 0;
+}
+.footer p{
+    color: white;
+    margin:0
+}
+
+@media (max-width: 768px) {
+    .fixed-image {
+        display: none;
+    }
+    .scroll-content,
+    .landing {
+        width: 100%;
+    }
+}
