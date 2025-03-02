@@ -49,7 +49,7 @@ const renderUcapan = (snapshot) =>{
         const waktu = timeAgo(createdAt);
         const ucapanItem = `
             <div class='card p-2 mb-2 text-start'>
-                <p><strong>${name}</strong> <strong>${attendance}</strong></p>
+                <p><strong>${name}</strong> - <strong>${attendance}</strong></p>
                 <p class='mb-1'>${comment}</p>
                 <p class='mb-0 fs-6'><i class="bi bi-clock"></i>${waktu}</p>
             </div>
