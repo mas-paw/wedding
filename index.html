@@ -107,7 +107,7 @@
 			<div class="ucapan">
 				<h2>Doa & Ucapan</h2>
 				<p>Silakan tinggalkan doa dan ucapan Anda untuk pengantin.</p>
-				<form id="attendanceForm" method="post">
+				<form id="attendanceForm" method="post" class="text-start">
 					<div class="mb-3">
 						<label for="name" class="form-label">Nama</label>
 						<input type="text" name="name" class="form-control" id="name" placeholder="Nama" required>
@@ -125,10 +125,12 @@
 							<option value="Masih Ragu">Masih Ragu</option>
 						</select>
 					</div>
-					<button type="submit" class="btn btn-primary mt-2">Kirim</button>
+					<div class="mb-3">
+						<button type="submit" class="btn btn-secondary mt-2">Kirim</button>
+					</div>
 				</form>
 			</div>
-			<div id="comments" class="comments mt-4 w-100">
+			<div id="comments" class="comments w-100">
 			</div>
         </section>
 
