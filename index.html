@@ -104,29 +104,32 @@
         </section>
 
         <section class="section">
-            <h2>Doa & Ucapan</h2>
-            <p>Silakan tinggalkan doa dan ucapan Anda untuk pengantin.</p>
-            <form id="attendanceForm" method="post">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Nama</label>
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Nama" required>
-                </div>
-                <div class="mb-3">
-                    <label for="comment" class="form-label">Ucapan & Doa</label>
-                    <textarea class="form-control" name="comment" id="comment" rows="3" placeholder="Tulis Doa dan Ucapan" required></textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="attendance" class="form-label">Konfirmasi Kehadiran</label>
-                    <select class="form-control" name="attendance" id="attendance" required>
-                        <option value="">Konfirmasi Kehadiran</option>
-                        <option value="Hadir">Hadir</option>
-                        <option value="Tidak Hadir">Tidak Hadir</option>
-                        <option value="Masih Ragu">Masih Ragu</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary mt-2">Kirim</button>
-            </form>
-			<div id="comments"></div>
+			<div class="ucapan">
+				<h2>Doa & Ucapan</h2>
+				<p>Silakan tinggalkan doa dan ucapan Anda untuk pengantin.</p>
+				<form id="attendanceForm" method="post">
+					<div class="mb-3">
+						<label for="name" class="form-label">Nama</label>
+						<input type="text" name="name" class="form-control" id="name" placeholder="Nama" required>
+					</div>
+					<div class="mb-3">
+						<label for="comment" class="form-label">Ucapan & Doa</label>
+						<textarea class="form-control" name="comment" id="comment" rows="3" placeholder="Tulis Doa dan Ucapan" required></textarea>
+					</div>
+					<div class="mb-3">
+						<label for="attendance" class="form-label">Konfirmasi Kehadiran</label>
+						<select class="form-control" name="attendance" id="attendance" required>
+							<option value="">Konfirmasi Kehadiran</option>
+							<option value="Hadir">Hadir</option>
+							<option value="Tidak Hadir">Tidak Hadir</option>
+							<option value="Masih Ragu">Masih Ragu</option>
+						</select>
+					</div>
+					<button type="submit" class="btn btn-primary mt-2">Kirim</button>
+				</form>
+			</div>
+			<div id="comments" class="comments mt-4 w-100">
+			</div>
         </section>
 
         <!-- Section 6: Kirim Hadiah -->
