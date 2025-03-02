@@ -36,7 +36,6 @@ $(function(){
 
     const music = $("#bg-music")[0];
      // Kunci scroll saat awal
-    $(".scroll-content").addClass("locked");
     $(".landing-content button").on("click", function() {
         $("#landing").fadeOut(800, function() {
             $(".scroll-content").removeClass("locked"); // Aktifkan scroll setelah hilang
