@@ -35,7 +35,7 @@ $(function(){
     startCountdown(weddingDate);
 
     const music = $("#bg-music")[0];
-     // Kunci scroll saat awal
+    music.pause()
     $(".landing-content button").on("click", function() {
         $("#landing").fadeOut(500, function() {
             $(".scroll-content").removeClass("locked"); // Aktifkan scroll setelah hilang
