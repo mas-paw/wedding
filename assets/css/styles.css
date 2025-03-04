@@ -6,9 +6,10 @@
     margin:0;
 }
 .fixed-image {
-    background: url('https://via.placeholder.com/800x1000') no-repeat center center;
+    background-image: url('../../media/cover.JPG');
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    background-color: gray;
     width: 65%;
     height: 100vh;
     position: fixed;
