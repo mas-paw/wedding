@@ -38,7 +38,13 @@
     opacity: 1;
     transform: translateY(0);
 }
-.section:nth-child(4) { background-color: #0D120E; color: #FFFFFF }
+.section:nth-child(4) {
+    color: #FFFFFF;
+    background-image: url('../../media/2.JPG');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .section:nth-child(5) { background-color: #45553D; color: #FFFFFF }
 .section:nth-child(6) { background-color: #6D7E5F; color: #FFFFFF }
 .section:nth-child(7) { background-color: #92A079; color: #FFFFFF }
