@@ -33,6 +33,21 @@
     border-bottom: 1px solid #ddd;
     overflow: hidden;
 }
+.section-content{
+    height: 100vh;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+}
+.section-content.hadiah .card{
+    background-color: #329FCE;
+}
 .section.visible {
     opacity: 1;
     transform: translateY(0);
@@ -168,6 +183,18 @@ button#open-invitation:hover {
     overflow-y: scroll;
 }
 
+
+/* hadiah */
+.num-rek{
+    font-family: "Nunito Sans", Sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.bi-clipboard{
+    cursor: pointer;
+}
 
 
 /* footer */

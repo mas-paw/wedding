@@ -46,108 +46,142 @@
 
         <!-- Section 2: Perkenalan Calon Mempelai -->
         <section class="section text-center">
-            <h2>Calon Mempelai</h2>
-            <div class="row">
-                <div class="col-6">
-                    <img src="https://via.placeholder.com/150" class="img-fluid rounded-circle mb-2" alt="Mempelai Pria">
-                    <p>Nama Mempelai Pria</p>
-                </div>
-                <div class="col-6">
-                    <img src="https://via.placeholder.com/150" class="img-fluid rounded-circle mb-2" alt="Mempelai Wanita">
-                    <p>Nama Mempelai Wanita</p>
-                </div>
-            </div>
+			<div class="section-content">
+				<h2>Calon Mempelai</h2>
+				<div class="row">
+					<div class="col-6">
+						<img src="https://via.placeholder.com/150" class="img-fluid rounded-circle mb-2" alt="Mempelai Pria">
+						<p>Nama Mempelai Pria</p>
+					</div>
+					<div class="col-6">
+						<img src="https://via.placeholder.com/150" class="img-fluid rounded-circle mb-2" alt="Mempelai Wanita">
+						<p>Nama Mempelai Wanita</p>
+					</div>
+				</div>
+			</div>
         </section>
 
         <!-- Section 3: Acara -->
 		<section class="section text-center">
-			<div class="event-details">
-				<!-- Countdown -->
-				<div id="countdown" class="countdown-container">
-					<h3>Menuju Hari Bahagia</h3>
+			<div class="section-content">
+				<div class="event-details">
+					<!-- Countdown -->
+					<div id="countdown" class="countdown-container">
+						<h3>Menuju Hari Bahagia</h3>
+						<div class="row">
+							<div class="col-3"><span id="days" class="countdown-box">00</span><p>Hari</p></div>
+							<div class="col-3"><span id="hours" class="countdown-box">00</span><p>Jam</p></div>
+							<div class="col-3"><span id="minutes" class="countdown-box">00</span><p>Menit</p></div>
+							<div class="col-3"><span id="seconds" class="countdown-box">00</span><p>Detik</p></div>
+						</div>
+					</div>
+	
+					<!-- Detail Acara -->
+					<h2 class="text-uppercase">Acara Pernikahan</h2>
 					<div class="row">
-						<div class="col-3"><span id="days" class="countdown-box">00</span><p>Hari</p></div>
-						<div class="col-3"><span id="hours" class="countdown-box">00</span><p>Jam</p></div>
-						<div class="col-3"><span id="minutes" class="countdown-box">00</span><p>Menit</p></div>
-						<div class="col-3"><span id="seconds" class="countdown-box">00</span><p>Detik</p></div>
+						<div class="col-md-6">
+							<h4 class="text-uppercase">Akad</h4>
+							<p>24 Mei 2025</p>
+							<p>9:00 WIB</p>
+						</div>
+						<div class="col-md-6">
+							<h4 class="text-uppercase">Resepsi</h4>
+							<p>24 Mei 2025</p>
+							<p>11:00 - 13:00 WIB</p>
+						</div>
 					</div>
+	
+					<!-- Lokasi & Maps -->
+					<p>WoodenKlub, Cipayung, Jakarta Timur</p>
+					<button class="btn btn-secondary mt-2" onclick="openMaps()"><i class="bi bi-map"> Google Map</i></button>
 				</div>
-
-				<!-- Detail Acara -->
-				<h2 class="text-uppercase">Acara Pernikahan</h2>
-				<div class="row">
-					<div class="col-md-6">
-						<h4 class="text-uppercase">Akad</h4>
-						<p>24 Mei 2025</p>
-						<p>9:00 WIB</p>
-					</div>
-					<div class="col-md-6">
-						<h4 class="text-uppercase">Resepsi</h4>
-						<p>24 Mei 2025</p>
-						<p>11:00 - 13:00 WIB</p>
-					</div>
-				</div>
-
-				<!-- Lokasi & Maps -->
-				<p>WoodenKlub, Cipayung, Jakarta Timur</p>
-				<button class="btn btn-secondary mt-2" onclick="openMaps()"><i class="bi bi-map"> Google Map</i></button>
 			</div>
 		</section>
 
 		<!-- Section 4: Memories -->
         <section class="section text-center">
-            <h2>Memories</h2>
-            <div class="row">
-                <div class="col-4"><img src="https://via.placeholder.com/100" class="img-fluid rounded" alt="Kenangan 1"></div>
-                <div class="col-4"><img src="https://via.placeholder.com/100" class="img-fluid rounded" alt="Kenangan 2"></div>
-                <div class="col-4"><img src="https://via.placeholder.com/100" class="img-fluid rounded" alt="Kenangan 3"></div>
-            </div>
+			<div class="section-content">
+				<h2>Memories</h2>
+				<div class="row">
+					<div class="col-4"><img src="https://via.placeholder.com/100" class="img-fluid rounded" alt="Kenangan 1"></div>
+					<div class="col-4"><img src="https://via.placeholder.com/100" class="img-fluid rounded" alt="Kenangan 2"></div>
+					<div class="col-4"><img src="https://via.placeholder.com/100" class="img-fluid rounded" alt="Kenangan 3"></div>
+				</div>
+			</div>
         </section>
 
 		<!-- Section 5: Ucapan -->
         <section class="section">
-			<div class="ucapan w-100">
-				<h2>Doa & Ucapan</h2>
-				<p>Silakan tinggalkan doa dan ucapan Anda untuk pengantin.</p>
-				<form id="attendanceForm" method="post" class="text-start">
-					<div class="mb-3">
-						<label for="name" class="form-label">Nama</label>
-						<input type="text" name="name" class="form-control" id="name" placeholder="Nama" required>
-					</div>
-					<div class="mb-3">
-						<label for="comment" class="form-label">Ucapan & Doa</label>
-						<textarea class="form-control" name="comment" id="comment" rows="3" placeholder="Tulis Doa dan Ucapan" required></textarea>
-					</div>
-					<div class="mb-3">
-						<label for="attendance" class="form-label">Konfirmasi Kehadiran</label>
-						<select class="form-control" name="attendance" id="attendance" required>
-							<option value="">Konfirmasi Kehadiran</option>
-							<option value="Hadir">Hadir</option>
-							<option value="Tidak Hadir">Tidak Hadir</option>
-							<option value="Masih Ragu">Masih Ragu</option>
-						</select>
-					</div>
-					<div class="mb-3">
-						<button type="submit" class="btn btn-secondary mt-2">Kirim</button>
-					</div>
-				</form>
-			</div>
-			<div id="comments" class="comments w-100">
+			<div class="section-content">
+				<div class="ucapan w-100">
+					<h2>Doa & Ucapan</h2>
+					<p>Silakan tinggalkan doa dan ucapan Anda untuk pengantin.</p>
+					<form id="attendanceForm" method="post" class="text-start">
+						<div class="mb-3">
+							<label for="name" class="form-label">Nama</label>
+							<input type="text" name="name" class="form-control" id="name" placeholder="Nama" required>
+						</div>
+						<div class="mb-3">
+							<label for="comment" class="form-label">Ucapan & Doa</label>
+							<textarea class="form-control" name="comment" id="comment" rows="3" placeholder="Tulis Doa dan Ucapan" required></textarea>
+						</div>
+						<div class="mb-3">
+							<label for="attendance" class="form-label">Konfirmasi Kehadiran</label>
+							<select class="form-control" name="attendance" id="attendance" required>
+								<option value="">Konfirmasi Kehadiran</option>
+								<option value="Hadir">Hadir</option>
+								<option value="Tidak Hadir">Tidak Hadir</option>
+								<option value="Masih Ragu">Masih Ragu</option>
+							</select>
+						</div>
+						<div class="mb-3">
+							<button type="submit" class="btn btn-secondary mt-2">Kirim</button>
+						</div>
+					</form>
+				</div>
+				<div id="comments" class="comments w-100">
+				</div>
 			</div>
         </section>
 
         <!-- Section 6: Kirim Hadiah -->
         <section class="section text-center">
-            <h2>Kirim Hadiah</h2>
-            <p>Jika ingin mengirim hadiah, silakan transfer ke:</p>
-            <p><strong>Bank XYZ</strong> - 1234567890 (a.n. Nama Pengantin)</p>
+			<div class="section-content w-100 d-flex justify-content-center hadiah">
+				<div class="title mb-5">
+					<h2>Wedding Gift</h2>
+				</div>
+				<div class="atm-card w-100">
+					<div class="card w-100 p-3 d-flex mb-5">
+						<div class="logo-bca d-flex justify-content-end">
+							<img decoding="async" width="48" height="19" src="https://acarakami.com/wp-content/uploads/2019/10/bca.svg" class="attachment-medium size-medium wp-image-465" alt="">
+						</div>
+						<p class="num-rek"><span class="num">1660 6163 96</span><i class="bi bi-clipboard ms-1" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard"></i></p>
+						<p class="d-flex justify-content-start fw-bold pb-0 mb-0">a/n</p>
+						<p class="d-flex justify-content-start text-uppercase fw-bold">Syntia Tri Utama</p>
+						<p class="d-flex justify-content-start fw-bold">Bank BCA</p>
+					</div>
+
+					<div class="card w-100 p-3 d-flex mt-5">
+						<div class="logo-bca d-flex justify-content-end">
+							<img decoding="async" width="48" height="19" src="https://acarakami.com/wp-content/uploads/2019/10/bca.svg" class="attachment-medium size-medium wp-image-465" alt="">
+						</div>
+						<p class="num-rek"><span class="num">1650 5945 30</span><i class="bi bi-clipboard ms-1" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard"></i></p>
+						<p class="d-flex justify-content-start fw-bold pb-0 mb-0">a/n</p>
+						<p class="d-flex justify-content-start text-uppercase fw-bold">Ahmad Fauzi</p>
+						<p class="d-flex justify-content-start fw-bold">Bank BCA</p>
+					</div>
+
+				</div>
+			</div>
         </section>
 
 		<!-- Section 7: Penutup -->
 		<section class="section text-center">
-			<p>Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan do'a restu kepada kedua mempelai.</p>
-			<h2>Hormat Kami Yang Mengundang</h2>
-			<h1>Syntia & Fauzi</h1>
+			<div class="section-content">
+				<p>Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan do'a restu kepada kedua mempelai.</p>
+				<h2>Hormat Kami Yang Mengundang</h2>
+				<h1>Syntia & Fauzi</h1>
+			</div>
 		</section>
 
 		<footer class="footer text-center">
