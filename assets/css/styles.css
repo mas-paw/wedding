@@ -42,7 +42,6 @@
     align-items: center;
     scroll-snap-align: start;
     text-align: center;
-    border-bottom: 1px solid #ddd;
     overflow: hidden;
 }
 .section-content.hadiah .card{
