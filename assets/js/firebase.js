@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";;
-import { getDatabase, set, ref ,push, child, onValue } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-database.js"
+import { getDatabase, set, ref ,push, child, onValue, query, orderByChild } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-database.js"
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -23,7 +23,7 @@ const db = getDatabase(app)
 const tableName = 'attendance'
 
 const getComments = () => {
-	const dbRef = ref(db, `${tableName}/`)
+	const dbRef = query(ref(db, `${tableName}/`), orderByChild("createdAt")); // Urutkan berdasarkan createdAt
 	$('#comments').html('')
 	
 	onValue(dbRef, renderUcapan);
@@ -44,8 +44,10 @@ const timeAgo = (time) =>{
 const renderUcapan = (snapshot) =>{
     const ucapanList = document.getElementById('comments');
     ucapanList.innerHTML = '';
+    let tempList = []; // Simpan sementara
     snapshot.forEach(child => {
         const { name, comment, createdAt, attendance } = child.val();
+        console.log(name, comment, createdAt, attendance)
         const waktu = timeAgo(createdAt);
         const ucapanItem = `
             <div class='card p-2 mb-2 text-start'>
@@ -54,7 +56,13 @@ const renderUcapan = (snapshot) =>{
                 <p class='mb-0 fs-6'><i class="bi bi-clock me-1"></i>${waktu}</p>
             </div>
         `;
-        ucapanList.innerHTML += ucapanItem;
+        tempList.push({ createdAt, html: ucapanItem });
+    });
+
+    tempList.sort((a, b) => b.createdAt - a.createdAt);
+
+    tempList.forEach(item => {
+        ucapanList.innerHTML += item.html;
     });
 }
 
