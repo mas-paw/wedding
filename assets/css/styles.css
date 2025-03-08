@@ -196,6 +196,20 @@ button#open-invitation:hover {
     cursor: pointer;
 }
 
+.bg-elem{
+    background-image: url(https://acarakami.com/wp-content/uploads/2019/10/pattern-payment-1.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 60% auto;
+    opacity: .85;
+}
+
+.bg-master-card{
+    background-image: url('../../media/master-card.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 25% auto;
+}
 
 /* footer */
 .footer {
