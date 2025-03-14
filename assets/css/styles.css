@@ -180,7 +180,7 @@ button#open-invitation:hover {
 }
 .countdown-box {
     display: block;
-    font-size: 2rem;
+    font-size: clamp(1rem, 5vw, 2.5rem);
     font-weight: bold;
     background: white;
     color: black;
