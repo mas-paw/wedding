@@ -1,3 +1,7 @@
+.fs-6{
+    font-size: .75rem !important;
+}
+
 .container-fluid {
     height: 100vh;
     display: flex;
