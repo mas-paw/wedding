@@ -248,6 +248,10 @@ button#open-invitation:hover {
 }
 
 @media (max-width: 768px) {
+    .img-fluid{
+        max-width: 50% !important;
+    }
+
     .fixed-image {
         display: none;
     }
