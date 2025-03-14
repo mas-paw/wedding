@@ -17,6 +17,18 @@
     width: 65%;
     height: 100vh;
     position: fixed;
+    display: flex;
+    align-items: flex-end; /* Agar teks ada di bawah */
+    justify-content: center;
+    padding-bottom: 20px; /* Jarak dari bawah */
+}
+.bridegroom-names {
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 .scroll-content {
     width: 35%;
