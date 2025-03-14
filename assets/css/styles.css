@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Angelos'; /* Name your font */
+    src: url('../hugh-is-life-personal-use.italic.ttf') format('opentype'); /* Path to your .otf file */
+    font-weight: normal;
+    font-style: normal;
+}
+
 .fs-6{
     font-size: .75rem !important;
 }
