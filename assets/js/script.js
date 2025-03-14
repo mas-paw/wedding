@@ -36,6 +36,11 @@ function getQueryParam(param) {
     return urlParams.get(param);
 }
 
+function greetUser(name) {
+    name = name.replaceAll('-',' ')
+    return `${name}`;
+}
+
 $(function(){
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
@@ -86,7 +91,8 @@ $(function(){
     });
 
     // Ambil nama dari URL (?to=Nama Tamu)
-    const guestName = getQueryParam("to");
+    const guestName = greetUser(getQueryParam("to"));
+    
     const guestMessage = document.getElementById("guest-name");
 
     $('input[name=name]').val(guestName)
