@@ -253,6 +253,7 @@ button#open-invitation:hover {
 }
 .img-fluid{
     max-width: 80% !important;
+    border-radius: 12px;
 }
 
 @media (max-width: 768px) {
