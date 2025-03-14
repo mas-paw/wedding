@@ -44,7 +44,7 @@ function greetUser(name) {
 $(function(){
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-    $('.bi-clipboard').click(function(e){
+    $('.bi-copy').click(function(e){
         const rekNumber = $(this).parent().find('span').text().replaceAll(' ','')
         navigator.clipboard.writeText(rekNumber)
         const tooltip = bootstrap.Tooltip.getInstance(this)
@@ -52,12 +52,8 @@ $(function(){
         $(this).attr('data-bs-title', 'Copied!');
         const newTooltip = new bootstrap.Tooltip(this);
         newTooltip.show()
-        $(this).toggleClass('bi-clipboard')
-        $(this).toggleClass('bi-clipboard-check')
         setTimeout(() => {
-            $(this).toggleClass('bi-clipboard-check')
-            $(this).toggleClass('bi-clipboard')
-            $(this).attr('data-bs-title', 'Copy to clipboard');
+            $(this).attr('data-bs-title', 'Copy');
             newTooltip.dispose()
             new bootstrap.Tooltip(this);
         }, 1500);
