@@ -63,8 +63,6 @@ const renderUcapan = (snapshot) =>{
     tempList.forEach(item => {
         ucapanList.innerHTML += item.html;
     });
-
-    console.log($('#comments').height())
 }
 
 $(function(){
