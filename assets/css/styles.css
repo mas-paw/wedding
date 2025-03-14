@@ -44,9 +44,6 @@
     text-align: center;
     overflow: hidden;
 }
-.section-content.hadiah .card{
-    background-color: #329FCE;
-}
 .section.visible {
     opacity: 1;
     transform: translateY(0);
@@ -184,6 +181,15 @@ button#open-invitation:hover {
 
 
 /* hadiah */
+.section-content.hadiah .card{
+    max-width: 380px;
+}
+.section-content.hadiah .card.bca{
+    background-color: #329FCE;
+}
+.section-content.hadiah .card.seabank{
+}
+
 .num-rek{
     font-family: "Nunito Sans", Sans-serif;
     font-size: 25px;
