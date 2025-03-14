@@ -30,6 +30,12 @@ const startCountdown = (targetDate) => {
     updateCountdown();
     setInterval(updateCountdown, 1000);
 }
+
+function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
+
 $(function(){
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
@@ -78,4 +84,18 @@ $(function(){
             music.play();
         }
     });
+
+    // Ambil nama dari URL (?to=Nama Tamu)
+    const guestName = getQueryParam("to");
+    const guestMessage = document.getElementById("guest-name");
+
+    $('input[name=name]').val(guestName)
+
+    if (guestName) {
+        guestMessage.innerHTML = `
+            <p class="fw-bold">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+            <p class="fw-bold">${decodeURIComponent(guestName)}</p>
+            <p class="text-muted"><small>*Mohon maaf apabila ada kesalahan nama dan gelar</small></p>
+        `;
+    }
 })
