@@ -47,7 +47,6 @@ const renderUcapan = (snapshot) =>{
     let tempList = []; // Simpan sementara
     snapshot.forEach(child => {
         const { name, comment, createdAt, attendance } = child.val();
-        console.log(name, comment, createdAt, attendance)
         const waktu = timeAgo(createdAt);
         const ucapanItem = `
             <div class='card p-2 mb-2 text-start'>
@@ -64,6 +63,8 @@ const renderUcapan = (snapshot) =>{
     tempList.forEach(item => {
         ucapanList.innerHTML += item.html;
     });
+
+    console.log($('#comments').height())
 }
 
 $(function(){
