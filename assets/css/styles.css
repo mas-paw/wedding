@@ -250,7 +250,7 @@ button#open-invitation:hover {
 
 @media (max-width: 768px) {
     .img-fluid{
-        max-width: 50% !important;
+        max-width: 40% !important;
     }
 
     .fixed-image {
