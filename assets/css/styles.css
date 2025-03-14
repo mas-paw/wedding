@@ -246,6 +246,9 @@ button#open-invitation:hover {
     color: white;
     margin:0
 }
+.img-fluid{
+    max-width: 80% !important;
+}
 
 @media (max-width: 768px) {
     .img-fluid{
