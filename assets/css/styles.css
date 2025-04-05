@@ -42,7 +42,7 @@
     margin:0;
 }
 .fixed-image {
-    background-image: url('../../media/cover.JPG');
+    background-image: linear-gradient(to bottom, rgba(215, 189, 221, 0.15), rgba(236, 213, 231, 0.2)), url('../../media/cover.JPG');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
