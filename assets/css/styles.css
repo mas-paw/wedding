@@ -5,6 +5,28 @@
     font-style: normal;
 }
 
+:root {
+    /* Primary colors */
+    --primary-color: #5D2E8C;       /* Ungu tua (plum) */
+    --primary-light: #E8D6F4;       /* Versi terang dari ungu tua */
+    --primary-soft: #F3E5F5;        /* Ungu pastel muda */
+  
+    /* Accent colors */
+    --accent-gold: #D4AF37;         /* Gold klasik */
+    --accent-champagne: #EED6C4;    /* Champagne lembut */
+  
+    /* Background colors */
+    --bg-main: #FFFBF7;             /* Putih krem (hangat) */
+    --bg-light: #FAF9F6;            /* Warna sangat lembut */
+  
+    /* Text colors */
+    --text-dark: #2E2E2E;           /* Abu gelap untuk teks utama */
+    --text-soft: #4A4A4A;           /* Abu netral untuk teks ringan */
+  
+    /* Border or subtle detail */
+    --border-color: #E0D3E5;        /* Warna soft untuk garis pemisah */
+  }
+
 .fs-6{
     font-size: .75rem !important;
 }
@@ -53,7 +75,7 @@
     align-items: center;
     scroll-snap-align: start;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--border-color);
     overflow: hidden;
 }
 .section-content{
@@ -87,11 +109,11 @@
     padding:20px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
 }
-.section:nth-child(5) { background-color: #45553D; color: #FFFFFF }
-.section:nth-child(6) { background-color: #6D7E5F; color: #FFFFFF }
-.section:nth-child(7) { background-color: #92A079; color: #FFFFFF }
-.section:nth-child(8) { background-color: #C4C8AC; color: #FFFFFF }
-.section:nth-child(9) { background-color: #E8E9E0; color: #333333 }
+.section:nth-child(5) { background-color: var(--primary-color); color: #FFFFFF }
+.section:nth-child(6) { background-color: var(--primary-light); color: #FFFFFF }
+.section:nth-child(7) { background-color: var(--primary-soft); color: #FFFFFF }
+.section:nth-child(8) { background-color: var(--bg-main); color: #FFFFFF }
+.section:nth-child(9) { background-color: var(--bg-light); color: #333333 }
 .section.landing{
     justify-content: flex-end;
 }
