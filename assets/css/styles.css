@@ -8,8 +8,8 @@
 :root {
     /* Primary colors */
     --primary-color: #d7bddd;       /* Ungu tua (plum) */
-    --primary-light: #d7bddd;       /* Versi terang dari ungu tua */
-    --primary-soft: #e5d3e9 ;        /* Ungu pastel muda */
+    --primary-light: #e5d3e9;       /* Versi terang dari ungu tua */
+    --primary-soft: #ecd5e7;        /* Ungu pastel muda */
   
     /* Accent colors */
     --accent-gold: #D4AF37;         /* Gold klasik */
@@ -275,10 +275,8 @@ button#open-invitation:hover {
     margin:0
 }
 .img-fluid{
-    width: 250px;
-    height: 250px;
+    max-width: 80%;
     border-radius: 12px;
-    object-fit: cover;
 }
 
 .rounded{
@@ -331,8 +329,7 @@ button#open-invitation:hover {
   }
 @media (max-width: 768px) {
     .img-fluid{
-        width: 150px !important;
-        height: 150px;
+        max-width: 40% !important;
         object-fit: cover;
     }
 
