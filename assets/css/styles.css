@@ -282,8 +282,7 @@ button#open-invitation:hover {
     justify-content: flex-end;
     align-items: center;
     padding:20px;
-    position: relative;
-    z-index: 3;
+    background: linear-gradient(to bottom, rgba(215, 189, 221, 0.15), rgba(236, 213, 231, 0.7));
 }
 .section.section-overlay p{
     color: var(--text-main);
@@ -291,17 +290,6 @@ button#open-invitation:hover {
 .section.first-section{
     position:relative;
     z-index:1;
-}
-
-.section.first-section::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--primary-color); /* overlay ungu */
-    opacity: .5;
-    z-index: 1;
 }
 
 .section-mempelai {
