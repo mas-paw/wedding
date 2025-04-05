@@ -26,6 +26,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Belleza';
+    src: url('../Belleza.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 :root {
     /* Primary colors */
@@ -55,6 +62,7 @@
     --font-angelos: 'Angelos';
     --font-vidaloka: 'Vidaloka';
     --font-pinyon: 'Pinyon';
+    --font-belleza: 'Belleza';
 }
 
 .fs-6{
@@ -74,6 +82,10 @@
 
 .font-pinyon{
     font-family: var(--font-pinyon) !important;
+}
+
+.font-belleza{
+    font-family: var(--font-belleza) !important;
 }
 
 .container-fluid {
@@ -358,6 +370,7 @@ button#open-invitation:hover {
 .section-mempelai .section-content {
     position: relative;
     z-index: 3;
+    overflow: visible;
 }
 
 .section-mempelai h2,
