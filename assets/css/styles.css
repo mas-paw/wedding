@@ -1,9 +1,31 @@
 @font-face {
-    font-family: 'Angelos'; /* Name your font */
-    src: url('../hugh-is-life-personal-use.italic.ttf') format('opentype'); /* Path to your .otf file */
+    font-family: 'Angelos';
+    src: url('../hugh-is-life-personal-use.italic.ttf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Great Vibes';
+    src: url('../GreatVibes.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vidaloka';
+    src: url('../Vidaloka.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pinyon';
+    src: url('../PinyonScript.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 :root {
     /* Primary colors */
@@ -28,10 +50,30 @@
   
     /* Border or subtle detail */
     --border-color: #E0D3E5;        /* Warna soft untuk garis pemisah */
-  }
+
+    --font-vibes: 'Great Vibes';
+    --font-angelos: 'Angelos';
+    --font-vidaloka: 'Vidaloka';
+    --font-pinyon: 'Pinyon';
+}
 
 .fs-6{
     font-size: .75rem !important;
+}
+
+.font-vibes{
+    font-family: var(--font-vibes) !important;
+}
+.font-angelos{
+    font-family: var(--font-angelos) !important;
+}
+
+.font-vidaloka{
+    font-family: var(--font-vidaloka) !important;
+}
+
+.font-pinyon{
+    font-family: var(--font-pinyon) !important;
 }
 
 .container-fluid {

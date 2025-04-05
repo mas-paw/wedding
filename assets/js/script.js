@@ -96,7 +96,7 @@ $(function(){
     if (guestName) {
         guestMessage.innerHTML = `
             <p class="fw-bold">Kepada Yth. Bapak/Ibu/Saudara/i</p>
-            <p class="fw-bold text-capitalize">${decodeURIComponent(guestName)}</p>
+            <p class="fw-bold text-capitalize font-vidaloka">${decodeURIComponent(guestName)}</p>
             <p class="text-muted"><small>*Mohon maaf apabila ada kesalahan nama dan gelar</small></p>
         `;
     }
