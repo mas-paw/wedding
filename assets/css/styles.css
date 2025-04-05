@@ -52,6 +52,7 @@
     align-items: flex-end; /* Agar teks ada di bawah */
     justify-content: center;
     padding-bottom: 20px; /* Jarak dari bawah */
+    z-index: 999;
 }
 .bridegroom-names {
     color: var(--text-dark);
@@ -96,20 +97,11 @@
     transform: translateY(0);
 }
 .section:nth-child(4) {
-    color: #FFFFFF;
+    color: var(--text-main);
     background-image: url('../../media/2.JPG');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-.section .section-overlay{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    padding:20px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
 }
 .section:nth-child(6) { background-color: var(--primary-light); color: var(--text-dark) }
 .section:nth-child(7) { background-color: var(--primary-soft); color: var(--text-dark) }
@@ -136,7 +128,7 @@
 }
 
 .landing-content {
-    background-color: white;
+    background-color: var(--text-main);
     opacity: .5;
     padding: 20px;
     border-radius: 10px;
@@ -283,6 +275,35 @@ button#open-invitation:hover {
     border-radius: 12px !important;
 }
 
+.section .section-overlay{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding:20px;
+    position: relative;
+    z-index: 3;
+}
+.section.section-overlay p{
+    color: var(--text-main);
+}
+.section.first-section{
+    position:relative;
+    z-index:1;
+}
+
+.section.first-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary-color); /* overlay ungu */
+    opacity: .5;
+    z-index: 1;
+}
+
 .section-mempelai {
     position: relative;
     color: var(--text-main);
@@ -290,9 +311,9 @@ button#open-invitation:hover {
     background: url('../../media/cover2.jpg') no-repeat center center/cover; /* ganti dengan foto kamu */
     z-index: 1;
     color: var(--text-main);
-  }
-  
-  .section-mempelai::before {
+}
+
+.section-mempelai::before {
     content: '';
     position: absolute;
     top: 0; left: 0;
@@ -301,24 +322,24 @@ button#open-invitation:hover {
     background-color: var(--primary-color); /* overlay ungu */
     z-index: 2;
     opacity: .5;
-  }
-  
-  .section-mempelai .section-content {
+}
+
+.section-mempelai .section-content {
     position: relative;
     z-index: 3;
-  }
-  
-  .section-mempelai h2,
-  .section-mempelai h3,
-  .section-mempelai p {
+}
+
+.section-mempelai h2,
+.section-mempelai h3,
+.section-mempelai p {
     color: var(--text-main);
-  }
+}
 
-  div.img-fluid{
+div.img-fluid{
 
-  }
+}
 
-  .frame-img {
+.frame-img {
     width: 100%;
     height: 100%;
     left: 50%;
@@ -326,7 +347,7 @@ button#open-invitation:hover {
     transform: translate(-50%, -50%);
     position: absolute;
     pointer-events: none;
-  }
+}
 @media (max-width: 768px) {
     .img-fluid{
         max-width: 40% !important;
