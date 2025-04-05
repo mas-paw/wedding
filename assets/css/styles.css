@@ -7,9 +7,9 @@
 
 :root {
     /* Primary colors */
-    --primary-color: #AC89B5;       /* Ungu tua (plum) */
-    --primary-light: #D8BFD8;       /* Versi terang dari ungu tua */
-    --primary-soft: #C4B7D4;        /* Ungu pastel muda */
+    --primary-color: #d7bddd;       /* Ungu tua (plum) */
+    --primary-light: #d7bddd;       /* Versi terang dari ungu tua */
+    --primary-soft: #e5d3e9 ;        /* Ungu pastel muda */
   
     /* Accent colors */
     --accent-gold: #D4AF37;         /* Gold klasik */
@@ -22,6 +22,8 @@
     /* Text colors */
     --text-dark: #2E2E2E;           /* Abu gelap untuk teks utama */
     --text-soft: #4A4A4A;           /* Abu netral untuk teks ringan */
+    --text-main: #FFFFFF;
+    --text-secondary: #3B3B3B;
   
     /* Border or subtle detail */
     --border-color: #E0D3E5;        /* Warna soft untuk garis pemisah */
@@ -109,7 +111,6 @@
     padding:20px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
 }
-.section:nth-child(5) { background-color: var(--primary-color); color: #FFFFFF }
 .section:nth-child(6) { background-color: var(--primary-light); color: var(--text-dark) }
 .section:nth-child(7) { background-color: var(--primary-soft); color: var(--text-dark) }
 .section:nth-child(8) { background-color: var(--bg-main); color: var(--text-dark) }
@@ -177,6 +178,7 @@ button#open-invitation:hover {
     cursor: pointer;
     width: auto;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 100;
 }
 .music-control:hover {
     background: rgba(255, 255, 255, 1);
@@ -188,7 +190,6 @@ button#open-invitation:hover {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 .event-details h2 {
-    font-size: 2rem;
     margin-bottom: 10px;
 }
 .event-details p {
@@ -274,17 +275,65 @@ button#open-invitation:hover {
     margin:0
 }
 .img-fluid{
-    max-width: 80% !important;
+    width: 250px;
+    height: 250px;
     border-radius: 12px;
+    object-fit: cover;
 }
 
 .rounded{
     border-radius: 12px !important;
 }
 
+.section-mempelai {
+    position: relative;
+    color: var(--text-main);
+    padding: 100px 0;
+    background: url('../../media/cover2.jpg') no-repeat center center/cover; /* ganti dengan foto kamu */
+    z-index: 1;
+    color: var(--text-main);
+  }
+  
+  .section-mempelai::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color); /* overlay ungu */
+    z-index: 2;
+    opacity: .5;
+  }
+  
+  .section-mempelai .section-content {
+    position: relative;
+    z-index: 3;
+  }
+  
+  .section-mempelai h2,
+  .section-mempelai h3,
+  .section-mempelai p {
+    color: var(--text-main);
+  }
+
+  div.img-fluid{
+
+  }
+
+  .frame-img {
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    pointer-events: none;
+  }
 @media (max-width: 768px) {
     .img-fluid{
-        max-width: 40% !important;
+        width: 150px !important;
+        height: 150px;
+        object-fit: cover;
     }
 
     .fixed-image {
