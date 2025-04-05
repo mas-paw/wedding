@@ -17,6 +17,7 @@
   
     /* Background colors */
     --bg-main: #ece6ee;             /* Putih krem (hangat) */
+    --bg-dark: #000000;
     --bg-light: #e0d7e3;            /* Warna sangat lembut */
   
     /* Text colors */
@@ -282,7 +283,7 @@ button#open-invitation:hover {
     justify-content: flex-end;
     align-items: center;
     padding:20px;
-    background: linear-gradient(to bottom, rgba(215, 189, 221, 0.15), rgba(236, 213, 231, 0.7));
+    background: linear-gradient(to bottom, rgba(215, 189, 221, 0.15), rgba(236, 213, 231, 0.2));
 }
 .section.section-overlay p{
     color: var(--text-main);
@@ -335,6 +336,9 @@ div.img-fluid{
     transform: translate(-50%, -50%);
     position: absolute;
     pointer-events: none;
+}
+.section.ending svg{
+    animation: shape-animation 15s 5s ease-in-out infinite;
 }
 @media (max-width: 768px) {
     .img-fluid{
