@@ -52,7 +52,7 @@
     padding-bottom: 20px; /* Jarak dari bawah */
 }
 .bridegroom-names {
-    color: black;
+    color: var(--text-dark);
     padding: 10px 20px;
     text-align: center;
     border-radius: 8px;
@@ -110,10 +110,10 @@
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
 }
 .section:nth-child(5) { background-color: var(--primary-color); color: #FFFFFF }
-.section:nth-child(6) { background-color: var(--primary-light); color: #FFFFFF }
-.section:nth-child(7) { background-color: var(--primary-soft); color: #FFFFFF }
-.section:nth-child(8) { background-color: var(--bg-main); color: #FFFFFF }
-.section:nth-child(9) { background-color: var(--bg-light); color: #333333 }
+.section:nth-child(6) { background-color: var(--primary-light); color: var(--text-dark) }
+.section:nth-child(7) { background-color: var(--primary-soft); color: var(--text-dark) }
+.section:nth-child(8) { background-color: var(--bg-main); color: var(--text-dark) }
+.section:nth-child(9) { background-color: var(--bg-light); color: var(--text-dark) }
 .section.landing{
     justify-content: flex-end;
 }
@@ -198,7 +198,7 @@ button#open-invitation:hover {
 .event-details p,
 .event-details .row
 {
-    color: black;
+    color: var(--text-dark);
 }
 
 .countdown-container {
@@ -212,7 +212,7 @@ button#open-invitation:hover {
     font-size: clamp(1rem, 5vw, 1.5rem);
     font-weight: bold;
     background: white;
-    color: black;
+    color: var(--text-dark);
     padding: 10px;
     border-radius: 8px;
     margin: 5px;
