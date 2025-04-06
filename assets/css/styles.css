@@ -189,10 +189,10 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-.section:nth-child(7) { background-color: var(--primary-light); color: var(--text-dark) }
-.section:nth-child(8) { background-color: var(--bg-light); color: var(--text-dark) }
-.section:nth-child(9) { background-color: var(--bg-main); color: var(--text-dark) }
-.section:nth-child(10) { background-color: var(--bg-light); color: var(--text-dark) }
+.section:nth-child(6) { background-color: var(--primary-light); color: var(--text-dark) }
+.section:nth-child(7) { background-color: var(--bg-light); color: var(--text-dark) }
+.section:nth-child(8) { background-color: var(--bg-main); color: var(--text-dark) }
+.section:nth-child(9) { background-color: var(--bg-light); color: var(--text-dark) }
 .section.landing{
     justify-content: space-between;
     padding-bottom: 100px;
