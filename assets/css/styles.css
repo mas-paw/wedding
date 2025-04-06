@@ -165,7 +165,7 @@
     margin-left: auto;
     height: 100vh;
     overflow-y: auto;
-    background: #fff;
+    background: var(--text-main);
     padding: 0;
 }
 .section {
@@ -266,21 +266,6 @@
 .landing-content div.bottom{
     display: flex;
     justify-content: center;
-}
-
-button#open-invitation {
-    background: #FFD700;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    margin-top: 20px;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-button#open-invitation:hover {
-    background: #FFA500;
 }
 
 .scroll-content.locked {
