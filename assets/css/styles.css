@@ -182,7 +182,7 @@
     opacity: 1;
     transform: translateY(0);
 }
-.section:nth-child(4) {
+.section:nth-child(3) {
     color: var(--text-main);
     background-image: url('../../media/2.JPG');
     background-position: center;
