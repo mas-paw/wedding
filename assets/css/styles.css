@@ -361,7 +361,7 @@ button#open-invitation:hover {
     justify-content: flex-end;
     align-items: center;
     padding:20px;
-    background: linear-gradient(to bottom, rgba(215, 189, 221, 0.15), rgba(236, 213, 231, 0.2));
+    background: linear-gradient(to bottom, rgba(215, 189, 221, 0.5), rgba(236, 213, 231, 0.1));
 }
 .section.section-overlay p{
     color: var(--text-main);
