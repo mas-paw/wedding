@@ -68,6 +68,9 @@
     --font-belleza: 'Belleza';
 }
 
+    font-size: 4rem !important;
+}
+
 .fs-6{
     font-size: .75rem !important;
 }
@@ -381,10 +384,10 @@ button#open-invitation:hover {
 .section-mempelai {
     position: relative;
     color: var(--text-main);
-    padding: 100px 0;
-    background: url('../../media/cover2.jpg') no-repeat center center/cover; /* ganti dengan foto kamu */
     z-index: 1;
     color: var(--text-main);
+    background: url('../../media/cover2.jpg') no-repeat center center/cover;
+    height: auto;
 }
 
 .section-mempelai::before {
@@ -398,19 +401,20 @@ button#open-invitation:hover {
     opacity: .5;
 }
 
-.section-mempelai .section-content {
+.section-mempelai .container-glass {
     position: relative;
     z-index: 3;
     overflow: visible;
 }
 
+.section-mempelai h1,
 .section-mempelai h2,
 .section-mempelai h3,
 .section-mempelai p {
-    color: var(--text-main);
+    color: var(--text-dark);
 }
 
-div.img-fluid{
+.img-fluid{
 
 }
 
@@ -426,9 +430,13 @@ div.img-fluid{
 .section.ending svg{
     animation: shape-animation 15s 5s ease-in-out infinite;
 }
+.img-fluid.rounded{
+    /* border-radius: 5000px 5000px 5000px 5000px !important; */
+    border-radius: 250px 250px 12px 12px !important;
+    border: 5px solid var(--primary-soft);
+}
 @media (max-width: 768px) {
     .img-fluid{
-        max-width: 40% !important;
         object-fit: cover;
     }
 
@@ -442,6 +450,13 @@ div.img-fluid{
 
     .section.ending{
         height: 20vh;
+    }
+
+    .section-mempelai {
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }
 
@@ -458,6 +473,5 @@ div.img-fluid{
 .container-glass {
     background: rgba(255, 255, 255, 0.7);
     border-radius: 16px;
-    backdrop-filter: blur(6px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
