@@ -54,6 +54,8 @@
     --text-soft: #4A4A4A;           /* Abu netral untuk teks ringan */
     --text-main: #FFFFFF;
     --text-secondary: #3B3B3B;
+
+    --btn-primary:#5a3e84;
   
     /* Border or subtle detail */
     --border-color: #E0D3E5;        /* Warna soft untuk garis pemisah */
@@ -164,6 +166,12 @@
 .section:nth-child(9) { background-color: var(--bg-light); color: var(--text-dark) }
 .section.landing{
     justify-content: flex-end;
+    padding-bottom: 100px;
+}
+.btn {
+    background-color: var(--btn-primary) !important;
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
 }
 .landing {
     position: absolute;
@@ -180,6 +188,22 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.section.ending{
+    height: 20vh;
+}
+
+.section.section-hadiah{
+    height: 74vh;
+}
+
+.section-content.hadiah{
+    justify-content: start;
+}
+
+.section-content .atm-card{
+    height: 50vh;
 }
 
 .landing-content {
