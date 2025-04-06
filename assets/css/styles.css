@@ -200,6 +200,9 @@
 .btn {
     background-color: var(--btn-primary) !important;
 }
+.align-items-normal{
+    align-items: normal !important;
+}
 .landing {
     position: absolute;
     width: 35%;
@@ -501,4 +504,11 @@ button#open-invitation:hover {
 .section-invite{
     height: 400px;
     background-color: var(--primary-light);;
+}
+
+.event-ico{
+    width: 20%;
+}
+.section-event{
+    height: auto !important;
 }
