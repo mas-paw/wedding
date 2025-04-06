@@ -233,6 +233,10 @@
     justify-content: start;
 }
 
+.section-ucapan{
+    overflow: visible;
+}
+
 .section-content .atm-card{
     height: 450px;
 }
@@ -482,6 +486,11 @@ button#open-invitation:hover {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+    }
+    #comments{
+        max-height: 60px;
+        min-height: 60px;
+        overflow-y: auto;
     }
 }
 
