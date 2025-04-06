@@ -43,9 +43,9 @@
 
 :root {
     /* Primary colors */
-    --primary-color: #d7bddd;       /* Ungu tua (plum) */
-    --primary-light: #e5d3e9;       /* Versi terang dari ungu tua */
-    --primary-soft: #ecd5e7;        /* Ungu pastel muda */
+    --primary-color: #d7bddd;       
+    --primary-light: #e5d3e9;      
+    --primary-soft: #ecd5e7;
   
     /* Accent colors */
     --accent-gold: #D4AF37;         /* Gold klasik */
@@ -515,7 +515,7 @@ button#open-invitation:hover {
 
 .section-invite{
     height: 400px;
-    background-color: var(--primary-light);;
+    background-color: var(--primary-soft);;
 }
 
 .event-ico{
