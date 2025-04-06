@@ -48,6 +48,7 @@
     --bg-main: #ece6ee;             /* Putih krem (hangat) */
     --bg-dark: #000000;
     --bg-light: #e0d7e3;            /* Warna sangat lembut */
+    --bg-secondary-dark:#a09da2;
   
     /* Text colors */
     --text-dark: #2E2E2E;           /* Abu gelap untuk teks utama */
@@ -344,9 +345,9 @@ button#open-invitation:hover {
 /* footer */
 .footer {
     padding: 20px;
-    background: #3e3e3e;
+    background: var(--bg-secondary-dark);
     font-size: 0.9rem;
-    color: #333;
+    color: var(--text-main);
     bottom: 0;
 }
 .footer p{
