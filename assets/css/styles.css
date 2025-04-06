@@ -371,7 +371,7 @@
 /* footer */
 .footer {
     padding: 20px;
-    background: var(--bg-secondary-dark);
+    background: var(--btn-primary);
     font-size: 0.9rem;
     color: var(--text-main);
     bottom: 0;
