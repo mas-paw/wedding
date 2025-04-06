@@ -53,7 +53,7 @@ const renderUcapan = (snapshot) =>{
             <div class='card p-2 mb-2 text-start'>
                 <p class='mb-1 fs-6 font-vidaloka'><strong>${name}</strong> - <strong>${attendance}</strong></p>
                 <p class='mb-1 fs-6 font-vidaloka'>${comment}</p>
-                <p class='mb-0 fs-6'><i class="bi bi-clock me-1"></i>${waktu}</p>
+                <p class='mb-0 fs-9'><i class="bi bi-clock me-1"></i>${waktu}</p>
             </div>
         `;
         tempList.push({ createdAt, html: ucapanItem });

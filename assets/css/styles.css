@@ -71,6 +71,10 @@
     font-size: .75rem !important;
 }
 
+.fs-9{
+    font-size: 9px !important;
+}
+
 .font-vibes{
     font-family: var(--font-vibes) !important;
 }
@@ -191,7 +195,7 @@
 }
 
 .section.ending{
-    height: 20vh;
+    height: 30vh;
 }
 
 .section.section-hadiah{
@@ -435,6 +439,10 @@ div.img-fluid{
     .scroll-content,
     .landing {
         width: 100%;
+    }
+
+    .section.ending{
+        height: 20vh;
     }
 }
 
