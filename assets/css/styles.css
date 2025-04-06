@@ -437,6 +437,10 @@ button#open-invitation:hover {
     border: 5px solid var(--primary-soft);
 }
 @media (max-width: 768px) {
+    .section.section-hadiah{
+        height: 690px;
+    }
+    
     .img-fluid{
         object-fit: cover;
     }
