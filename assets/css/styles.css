@@ -198,7 +198,8 @@
     height: 74vh;
 }
 
-.section-content.hadiah{
+.section-content.hadiah,
+.section-content.section-ucapan{
     justify-content: start;
 }
 
@@ -294,6 +295,9 @@ button#open-invitation:hover {
 #comments{
     overflow: hidden;
     overflow-y: auto;
+    min-height: 240px;
+    max-height: 240px;
+    width: 100vw;
 }
 
 
@@ -442,4 +446,11 @@ div.img-fluid{
     height: 100%;
     z-index: 0;
     pointer-events: none;
+}
+
+.container-glass {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }

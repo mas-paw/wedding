@@ -43,6 +43,7 @@ const timeAgo = (time) =>{
 
 const renderUcapan = (snapshot) =>{
     const ucapanList = document.getElementById('comments');
+    $('.comment-amount').text(snapshot.size)
     ucapanList.innerHTML = '';
     let tempList = []; // Simpan sementara
     snapshot.forEach(child => {

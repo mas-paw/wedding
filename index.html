@@ -131,34 +131,43 @@
 
 		<!-- Section 5: Ucapan -->
         <section class="section">
-			<div class="section-content">
-				<div class="ucapan w-100">
-					<h2 class="font-vidaloka fw-bold">Doa & Ucapan</h2>
-					<p class="font-vidaloka fw-bold">Silakan tinggalkan doa dan ucapan Anda untuk pengantin.</p>
-					<form id="attendanceForm" method="post" class="text-start">
+			<div class="section-content section-ucapan d-flex flex-column gap-4">
+				<div class="container-glass p-4">
+					<div class="ucapan w-100">
+					  <h2 class="font-vidaloka fw-bold">Doa & Ucapan</h2>
+					  <p class="font-vidaloka fw-bold">Silakan tinggalkan doa dan ucapan Anda untuk pengantin.</p>
+					  <form id="attendanceForm" method="post" class="text-start">
 						<div class="mb-3">
-							<label for="name" class="font-vidaloka form-label fw-bold">Nama</label>
-							<input type="text" name="name" class="form-control font-vidaloka" id="name" placeholder="Nama" required>
+						  <label for="name" class="font-vidaloka form-label fw-bold">Nama</label>
+						  <input type="text" name="name" class="form-control font-vidaloka" id="name" placeholder="Nama" required>
 						</div>
 						<div class="mb-3">
-							<label for="comment" class="font-vidaloka form-label fw-bold">Ucapan & Doa</label>
-							<textarea class="form-control font-vidaloka" name="comment" id="comment" rows="3" placeholder="Tulis Doa dan Ucapan" required></textarea>
+						  <label for="comment" class="font-vidaloka form-label fw-bold">Ucapan & Doa</label>
+						  <textarea class="form-control font-vidaloka" name="comment" id="comment" rows="3" placeholder="Tulis Doa dan Ucapan" required></textarea>
 						</div>
 						<div class="mb-3">
-							<label for="attendance" class="font-vidaloka form-label fw-bold">Konfirmasi Kehadiran</label>
-							<select class="form-control font-vidaloka" name="attendance" id="attendance" required>
-								<option value="">Konfirmasi Kehadiran</option>
-								<option value="Hadir">Hadir</option>
-								<option value="Tidak Hadir">Tidak Hadir</option>
-								<option value="Masih Ragu">Masih Ragu</option>
-							</select>
+						  <label for="attendance" class="font-vidaloka form-label fw-bold">Konfirmasi Kehadiran</label>
+						  <select class="form-control font-vidaloka" name="attendance" id="attendance" required>
+							<option value="">Konfirmasi Kehadiran</option>
+							<option value="Hadir">Hadir</option>
+							<option value="Tidak Hadir">Tidak Hadir</option>
+							<option value="Masih Ragu">Masih Ragu</option>
+						  </select>
 						</div>
 						<div class="mb-3">
-							<button type="submit" class="btn btn-secondary mt-2">Kirim Ucapan</button>
+						  <button type="submit" class="btn btn-secondary mt-2">Kirim Ucapan</button>
 						</div>
-					</form>
+					  </form>
+					</div>
 				</div>
-				<div id="comments" class="comments w-100">
+				<div class="container-glass w-100 d-flex align-items-center flex-column">
+					<div class="comment-header d-flex justify-content-center align-items-center p-2 border-bottom w-100">
+					  <p class="font-vidaloka fw-bold mb-0"><span class="comment-amount">0</span> Comments</p>
+					</div>
+					<div id="comments" class="comments w-100"></div>
+					<div class="comment-footer text-center py-2">
+						<small class="font-vidaloka text-muted">Terima kasih atas doa & ucapannya 🙏</small>
+					</div>
 				</div>
 			</div>
         </section>
