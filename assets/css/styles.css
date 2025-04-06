@@ -53,6 +53,7 @@
     --primary-color: #d7bddd;       
     --primary-light: #e5d3e9;      
     --primary-soft: #ecd5e7;
+    --primary-light-soft: #ece6ee;
   
     /* Accent colors */
     --accent-gold: #D4AF37;         /* Gold klasik */
@@ -512,7 +513,7 @@
 
 .section-invite{
     height: 400px;
-    background-color: var(--primary-soft);;
+    background-color: var(--primary-light-soft);;
 }
 
 .event-ico{
