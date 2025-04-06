@@ -99,6 +99,14 @@
     font-family: var(--font-belleza) !important;
 }
 
+.text-dark{
+    color:var(--text-dark);
+}
+
+.opacity{
+    opacity: .7;
+}
+
 .container-fluid {
     height: 100vh;
     display: flex;
@@ -291,7 +299,7 @@ button#open-invitation:hover {
     display: block;
     font-size: clamp(1rem, 5vw, 1.5rem);
     font-weight: bold;
-    background: white;
+    background: var(--text-main);
     color: var(--text-dark);
     padding: 10px;
     border-radius: 8px;
@@ -353,7 +361,7 @@ button#open-invitation:hover {
     bottom: 0;
 }
 .footer p{
-    color: white;
+    color: var(--text-main);
     margin:0
 }
 .img-fluid{
@@ -386,7 +394,6 @@ button#open-invitation:hover {
     position: relative;
     color: var(--text-main);
     z-index: 1;
-    color: var(--text-main);
     background: url('../../media/cover2.jpg') no-repeat center center/cover;
     height: auto;
 }
