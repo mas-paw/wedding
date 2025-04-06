@@ -40,6 +40,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Playfair';
+    src: url('../PlayfairDisplay.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 :root {
     /* Primary colors */
@@ -74,6 +81,7 @@
     --font-pinyon: 'Pinyon';
     --font-belleza: 'Belleza';
     --font-amsterdam: 'Amsterdam';
+    --font-playfair: 'Playfair';
 }
 
 .fs-1{
@@ -109,6 +117,10 @@
 
 .font-amsterdam{
     font-family: var(--font-amsterdam) !important;
+}
+
+.font-playfair{
+    font-family: var(--font-playfair) !important;
 }
 
 .text-dark{
