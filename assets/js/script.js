@@ -37,6 +37,7 @@ function getQueryParam(param) {
 }
 
 function greetUser(name) {
+    if (!name) return 'Anonim'
     name = name.replaceAll('-',' ')
     return `${name}`;
 }
@@ -88,6 +89,7 @@ $(function(){
 
     // Ambil nama dari URL (?to=Nama Tamu)
     const guestName = greetUser(getQueryParam("to"));
+    console.log(guestName)
     
     const guestMessage = document.getElementById("guest-name");
 
