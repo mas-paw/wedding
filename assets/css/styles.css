@@ -202,10 +202,29 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-.section:nth-child(6) { background-color: var(--primary-light-soft); color: var(--text-dark) }
-.section:nth-child(7) { background-color: var(--primary-light); color: var(--text-dark) }
-.section:nth-child(8) { background-color: var(--primary-light); color: var(--text-dark) }
-.section:nth-child(9) { background-color: var(--primary-light); color: var(--text-dark) }
+.section:nth-child(6) {
+    background-color: var(--primary-light-soft); color: var(--text-dark)
+}
+.section:nth-child(7) {
+    background-color: var(--primary-light); color: var(--text-dark)
+}
+.section:nth-child(8) {
+    background-color: var(--primary-light); color: var(--text-dark)
+}
+.section:nth-child(9) {
+    background-color: var(--primary-light); color: var(--text-dark)
+}
+
+.section-invite,
+.section:nth-child(6),
+.section:nth-child(7),
+.section:nth-child(8),
+.section:nth-child(9){
+    background-image: url('../../media/texture2.png');
+    background-repeat: repeat;
+    background-size: cover;
+}
+
 /* .section:nth-child(7) { background-color: var(--bg-light); color: var(--text-dark) }
 .section:nth-child(8) { background-color: var(--bg-main); color: var(--text-dark) }
 .section:nth-child(9) { background-color: var(--bg-main); color: var(--text-dark) } */
