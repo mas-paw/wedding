@@ -168,6 +168,9 @@
     border-bottom: 5px solid var(--border-color);
     overflow: hidden;
 }
+.inactive{
+    display: none !important;
+}
 .section-content{
     height: 100vh;
     display: flex;

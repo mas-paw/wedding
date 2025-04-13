@@ -66,6 +66,7 @@ $(function(){
     const music = $("#bg-music")[0];
     music.pause()
     $(".landing-content button").on("click", function() {
+        $('.inactive').removeClass('inactive')
         $("#landing").fadeOut(500, function() {
             $(".scroll-content").removeClass("locked"); // Aktifkan scroll setelah hilang
         });
