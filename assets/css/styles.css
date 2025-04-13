@@ -481,6 +481,9 @@
     border: 5px solid var(--primary-soft);
 }
 @media (max-width: 768px) {
+    .section-ucapan{
+        height: 900px;
+    }
     .section.section-hadiah{
         height: 690px;
     }
@@ -506,14 +509,6 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-    }
-}
-
-@media (max-height: 931px) {
-    #comments{
-        max-height: 13vh;
-        min-height: 13vh;
-        overflow-y: auto;
     }
 }
 
