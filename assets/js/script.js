@@ -110,8 +110,8 @@ $(function(){
         $('#landing').hide()
         $('.inactive').removeClass('inactive')
         $(".scroll-content").removeClass("locked");
-        music.play().catch(error => console.log("Autoplay masih diblokir:", error));
         $('.resepsi').hide()
         $('.ngunduh').show()
+        music.play().catch(error => console.log("Autoplay masih diblokir:", error));
     }
 })
