@@ -112,6 +112,8 @@ $(function(){
         $(".scroll-content").removeClass("locked");
         $('.resepsi').hide()
         $('.ngunduh').show()
-        enableMusic()
+        setTimeout(() => {
+            music.play().catch(error => console.log("Autoplay masih diblokir:", error));
+        }, 5000);
     }
 })
