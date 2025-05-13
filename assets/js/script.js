@@ -114,6 +114,6 @@ $(function(){
         $('.ngunduh').show()
         setTimeout(() => {
             music.play().catch(error => console.log("Autoplay masih diblokir:", error));
-        }, 5000);
+        }, 1000);
     }
 })
