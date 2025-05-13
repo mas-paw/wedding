@@ -1,6 +1,9 @@
 const openMaps = () =>{
     window.open("https://maps.app.goo.gl/JtPxqpMchqJZdW16A", "_blank")
 }
+const openMapsNdunduh = () =>{
+    window.open("https://maps.app.goo.gl/xM9ZHrduNJv7V3L88", "_blank")
+}
 const toggleMusic = () =>{
     const music = document.getElementById('bg-music');
     $(".music-control").find('i').toggleClass('bi-volume-up')
@@ -108,5 +111,7 @@ $(function(){
         $('.inactive').removeClass('inactive')
         $(".scroll-content").removeClass("locked");
         music.play().catch(error => console.log("Autoplay masih diblokir:", error));
+        $('.resepsi').hide()
+        $('.ngunduh').show()
     }
 })
