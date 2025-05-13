@@ -107,13 +107,12 @@ $(function(){
     // ngunduh mantu
     const mantu = getQueryParam('nm');
     if (mantu == '1') {
-        $('#landing').hide()
         $('.inactive').removeClass('inactive')
-        $(".scroll-content").removeClass("locked");
-        $('.resepsi').hide()
-        $('.ngunduh').show()
-        setTimeout(() => {
-            music.play().catch(error => console.log("Autoplay masih diblokir:", error));
-        }, 1000);
+        $("#landing").fadeOut(500, function() {
+            $(".scroll-content").removeClass("locked"); // Aktifkan scroll setelah hilang
+            $('.resepsi').hide()
+            $('.ngunduh').show()
+        });
+        music.play().catch(error => console.log("Autoplay masih diblokir:", error));
     }
 })
