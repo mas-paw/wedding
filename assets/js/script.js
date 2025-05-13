@@ -90,10 +90,7 @@ $(function(){
 
     // Ambil nama dari URL (?to=Nama Tamu)
     const guestName = greetUser(getQueryParam("to"));
-    console.log(guestName)
-    
     const guestMessage = document.getElementById("guest-name");
-
     $('input[name=name]').val(guestName)
 
     if (guestName) {
@@ -102,5 +99,14 @@ $(function(){
             <p class="fw-bold text-capitalize font-vidaloka">${decodeURIComponent(guestName)}</p>
             <p class="text-muted font-belleza"><small>*Mohon maaf apabila ada kesalahan nama dan gelar</small></p>
         `;
+    }
+
+    // ngunduh mantu
+    const mantu = getQueryParam('nm');
+    if (mantu == '1') {
+        $('#landing').hide()
+        $('.inactive').removeClass('inactive')
+        $(".scroll-content").removeClass("locked");
+        music.play().catch(error => console.log("Autoplay masih diblokir:", error));
     }
 })
